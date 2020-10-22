@@ -1,0 +1,77 @@
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.msgcontainer {
+    height: 100vh;
+}
+
+.area {
+    height: 50vh;
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+#mad {
+    background: #FFE2D6;
+}
+
+#mad .card {
+    border-bottom: 5px solid #F54900;
+}
+
+#sad {
+    background: #F5D68E;
+}
+
+#sad .card {
+    border-bottom: 5px solid #E8AA14;
+}
+
+#glad {
+    background: #ADF7FF;
+}
+
+#glad .card {
+    border-bottom: 5px solid #1BE7FF;
+}
+
+#cheer {
+    background: #DBFAE0;
+}
+
+#cheer .card {
+    border-bottom: 5px solid #6EEB83;
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    font-family: 'Bree Serif', serif;
+    float: left;
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+.card .delete {
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    color: crimson;
+    font-size: 30px;
+    position: absolute;
+    top: -40px;
+    right: -20px;
+}
+
+.card .delete:hover {
+    cursor: pointer
+}
