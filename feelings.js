@@ -49,17 +49,26 @@ const App = function () {
 
                 var whichBox = document.getElementById(data.type);
                 whichBox.appendChild(newCard);
-                whichBox.querySelector(".delete").addEventListener("click", function (event) {
-                    event
-                        .stopPropagation(); // stop the click from registering on the background box
-                    if (confirm("are you sure you want to delete this for all users?")) {
-                        channel.socket.send(JSON.stringify({
-                            command: "delete",
-                            id: data.id
-                        }));
-                        console.log("clicked the delete box");
+
+                whichBox.querySelectorAll(".delete").forEach(
+                    (delIcon) => {
+                        delIcon.addEventListener("click", function (event) {
+                            var allDeletes = event.target;
+                            var pDel = allDeletes.parentNode.getAttribute("id");
+                            console.log(pDel);
+                            event.stopPropagation(); // stop the click from registering on the background box
+                            if (confirm("are you sure you want to delete this for all users?")) {
+                                channel.socket.send(JSON.stringify({
+                                    command: "delete",
+                                    id: pDel
+                                }));
+                                console.log("clicked the delete box id: " + pDel);
+                                event.stopPropagation();
+                            }
+
+                        })
                     }
-                })
+                )
             }
 
             if (data.command == "delete") {
