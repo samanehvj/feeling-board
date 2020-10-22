@@ -22,23 +22,23 @@ body {
 }
 
 #mad .card {
-    border-bottom: 5px solid #F54900;
+    border-left: 4px solid red;
 }
 
 #sad {
-    background: #F5D68E;
+    background: lightcoral;
 }
 
 #sad .card {
-    border-bottom: 5px solid #E8AA14;
+    border-left: 4px solid blueviolet;
 }
 
 #glad {
-    background: #ADF7FF;
+    background: orange;
 }
 
 #glad .card {
-    border-bottom: 5px solid #1BE7FF;
+    border-left: 4px solid #1BE7FF;
 }
 
 #cheer {
@@ -46,7 +46,7 @@ body {
 }
 
 #cheer .card {
-    border-bottom: 5px solid #6EEB83;
+    border-left: 4px solid #6EEB83;
 }
 
 .card {
@@ -65,7 +65,7 @@ body {
     margin-top: 20px;
     text-transform: uppercase;
     padding: 10px 10px;
-    color: crimson;
+    color: orangered;
     font-size: 30px;
     position: absolute;
     top: -40px;
